@@ -1,0 +1,184 @@
+/* PRESENTATION
+* CSS : cssreference.io
+*/
+
+body {
+	background-color: #fee;
+}
+
+div	{
+	position: absolute;
+}
+
+#frame {
+	width: 90vh;
+	height: 90vh;
+	overflow: hidden;
+
+	text-align: center;
+	
+	top: 5vh;
+	left: calc(50vw - 45vh);
+}
+
+#frame > svg {
+	height: 78vh;
+}
+
+#bank	{
+	width: 90vh;
+	height: 10vh;
+	background-color: #eaa;
+	
+	left: 0;
+	bottom: 0;
+}
+
+#bank > svg {
+	width: 5vh;
+	height: 5vh;
+	padding: 1vh;
+	margin: 1.5vh;
+	
+	background-color: #fdd;
+	
+	box-shadow: -5px 5px 5px #0004;
+	
+	transition: opacity 1s, box-shadow 1s;
+}
+
+#bank > .found {
+	opacity: .6;
+	box-shadow: none;
+}
+
+#winner {
+	width: 100vw;
+	height: 100vh;
+	background-color: gold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	transition: 1s;
+}
+
+#winner > p {
+	font-size: 12vw;
+	margin-bottom: 5vw;
+	color: white;
+	font-family: "Bungee Shade";
+	
+	-webkit-animation: flash 3s infinite;
+	
+	        animation: flash 3s infinite;
+}
+
+#winner > button {
+	padding: 0.5em 1em;
+	background-color: #fff;
+	color: #fff;
+	border: none;
+	border-radius: 1vw;
+	font-family: "Courier";
+	font-size: 3vw;
+	
+	animation: flash 3s infinite reverse;
+	transition: .5s;
+}
+
+button:focus {
+	outline: 0;
+}
+
+button:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+	
+	transition: .5s;
+}
+
+.false {
+	opacity: 0;
+	z-index: -1;
+	
+	transition: 1s;
+}
+
+.object {
+	z-index: 99;
+	transition: 0.5s;
+}
+
+.object.found {
+	opacity: 0;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+.draggable3 {
+	z-index: 99;
+}
+
+@media ( orientation : portrait ) {
+	#frame {
+		width: 90vw;
+		height: 90vw;
+		
+		top: calc(50vh - 45vw);
+		left: 5vw;
+	}
+	
+	#frame > svg {
+		height: 78vw;
+	}
+	
+	.object	{
+		width: 5vw;
+		height: 5vw;
+	}
+	
+	#bank	{
+		width: 90vw;
+		height: 10vw;
+		
+		left: 0;
+		bottom: 0;
+	}
+	
+	#bank > svg {
+		width: 5vw;
+		height: 5vw;
+		padding: 1vw;
+		margin: 1.5vw;
+		
+		top: 2.5vw;
+	}
+}
+
+@-webkit-keyframes flash {
+	0% {
+		color: #fff;
+	}
+	33% {
+		color: #f77;
+	}
+	67% {
+		color: #5ff;
+	}
+}
+
+@keyframes flash {
+	0% {
+		color: #fff;
+	}
+	33% {
+		color: #f77;
+	}
+	67% {
+		color: #5ff;
+	}
+}
