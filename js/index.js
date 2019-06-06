@@ -58,7 +58,7 @@ function winner() {
 	}, 1500);
 }
 
-$('.screen').click(function(e) {
+$('.screen , .mouse , .keyboard').click(function(e) {
 	$('.screen').toggleClass('invisible');
 	let item = document.querySelector("#cat");
 	if (item.classList.contains("found")){

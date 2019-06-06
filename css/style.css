@@ -109,6 +109,16 @@ button:hover {
 .object {
 	z-index: 99;
 	transition: 0.5s;
+	cursor: pointer;
+}
+
+.screen, .mouse, .keyboard {
+	cursor: pointer;
+}
+
+.draggable, .draggable:active {
+	cursor: -webkit-grab !important;
+	cursor: grab !important;
 }
 
 .object.found {
